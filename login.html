@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | PICT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="auth-layout">
+
+        <!-- Columna azul -->
+        <section class="auth-info">
+            <div class="auth-logo">
+                <img src="logo PICT.png" alt="Logo de PICT">
+                <h1>PICT</h1>
+            </div>
+
+            <h2>Tecnología clara. A tu ritmo.</h2>
+
+            <p>
+                Aprende habilidades digitales mediante una
+                experiencia de formación accesible e inclusiva.
+            </p>
+
+            <ul>
+                <li>Instrucciones sencillas y claras.</li>
+                <li>Aprendizaje a tu propio ritmo.</li>
+                <li>Contenidos accesibles.</li>
+            </ul>
+        </section>
+
+        <!-- Columna blanca -->
+        <section class="auth-form-panel">
+
+            <h2>¡Te damos la bienvenida!</h2>
+
+            <p>Ingresa tus datos para continuar.</p>
+
+            <form class="auth-form" action="procesar_login.php" method="POST">
+                <label for="correo">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="Escribe tu correo electrónico"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="contrasena">Contraseña</label>
+                <input
+                    type="password"
+                    id="contrasena"
+                    name="contrasena"
+                    placeholder="Escribe tu contraseña"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit" class="btn-primary">
+                    Iniciar sesión
+                </button>
+            </form>
+
+            <p class="auth-links">
+                ¿No tienes cuenta?
+                <a href="register.html">Regístrate aquí</a>
+            </p>
+
+            <a href="index.html" class="back-link">
+                Volver al inicio
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- Botón de accesibilidad PICT -->
+<div class="pict-accesibilidad">
+
+  <button id="btn-accesibilidad"
+          type="button"
+          aria-label="Abrir opciones de accesibilidad"
+          aria-expanded="false"
+          aria-controls="menu-accesibilidad">
+    ♿
+  </button>
+
+  <div id="menu-accesibilidad" hidden>
+    <h2>Accesibilidad</h2>
+
+    <button type="button" id="aumentar-texto">
+      A+ Aumentar texto
+    </button>
+
+    <button type="button" id="disminuir-texto">
+      A- Disminuir texto
+    </button>
+
+    <button type="button" id="alto-contraste">
+      Alto contraste
+    </button>
+
+    <button type="button" id="leer-pagina">
+      🔊 Leer página
+    </button>
+
+    <button type="button" id="detener-lectura">
+      Detener lectura
+    </button>
+
+    <button type="button" id="restablecer-accesibilidad">
+      Restablecer
+    </button>
+
+  </div>
+</div>
+
+<script src="accesibilidad.js" defer></script>
+
+</body>
+</html>

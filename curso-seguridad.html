@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me cuido en Internet - PICT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="encabezado">
+    <div class="encabezado-contenido">
+        <div class="marca">
+            <img src="logo PICT.png" alt="Logo de PICT">
+            <h1>PICT</h1>
+        </div>
+    </div>
+</header>
+
+<main class="contenido-curso">
+
+    <section class="curso-intro">
+        <h1>Me cuido en Internet</h1>
+        <p>
+            En este curso aprenderás algunas recomendaciones para
+            navegar por Internet de manera segura y proteger
+            tu información personal.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Bienvenido al curso Me cuido en Internet. Aprenderás a proteger tu información y navegar de manera segura.')">
+            Escuchar introducción
+        </button>
+    </section>
+
+    <section class="leccion">
+        <h2>Lección 1. ¿Por qué debemos cuidarnos en Internet?</h2>
+        <p>
+            Internet permite comunicarnos, estudiar y buscar información.
+            Sin embargo, también debemos tener cuidado con las páginas
+            y personas desconocidas.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Internet permite comunicarnos, estudiar y buscar información. Sin embargo, también debemos tener cuidado con las páginas y personas desconocidas.')">
+            Escuchar lección
+        </button>
+    </section>
+
+    <section class="leccion">
+        <h2>Lección 2. Crear contraseñas seguras</h2>
+        <p>
+            Una contraseña ayuda a proteger tus cuentas.
+            Utiliza contraseñas difíciles de adivinar, combina
+            letras, números y símbolos, y evita compartirlas.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Una contraseña ayuda a proteger tus cuentas. Utiliza contraseñas difíciles de adivinar, combina letras, números y símbolos, y evita compartirlas.')">
+            Escuchar lección
+        </button>
+    </section>
+
+    <section class="leccion">
+        <h2>Lección 3. Proteger los datos personales</h2>
+        <p>
+            No compartas información privada con personas desconocidas.
+            Por ejemplo, tu dirección, número de teléfono, contraseñas
+            o datos bancarios.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('No compartas información privada con personas desconocidas. Por ejemplo, tu dirección, número de teléfono, contraseñas o datos bancarios.')">
+            Escuchar lección
+        </button>
+    </section>
+
+    <section class="leccion">
+        <h2>Lección 4. Reconocer enlaces sospechosos</h2>
+        <p>
+            Algunos mensajes contienen enlaces que pueden llevarte
+            a páginas falsas. No abras enlaces de remitentes
+            desconocidos ni ingreses tus contraseñas en páginas dudosas.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Algunos mensajes contienen enlaces que pueden llevarte a páginas falsas. No abras enlaces de remitentes desconocidos ni ingreses tus contraseñas en páginas dudosas.')">
+            Escuchar lección
+        </button>
+    </section>
+
+    <section class="leccion">
+        <h2>Lección 5. Navegar por páginas confiables</h2>
+        <p>
+            Antes de ingresar información, revisa que la dirección
+            de la página sea la correcta. Busca sitios oficiales
+            y evita descargar archivos de páginas desconocidas.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Antes de ingresar información, revisa que la dirección de la página sea la correcta. Busca sitios oficiales y evita descargar archivos de páginas desconocidas.')">
+            Escuchar lección
+        </button>
+    </section>
+
+    <section class="leccion">
+        <h2>Lección 6. ¿Qué hacer ante una situación sospechosa?</h2>
+        <p>
+            Si recibes un mensaje extraño o encuentras una página
+            sospechosa, no compartas información ni descargues archivos.
+            Cierra la página y pide ayuda a una persona de confianza.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Si recibes un mensaje extraño o encuentras una página sospechosa, no compartas información ni descargues archivos. Cierra la página y pide ayuda a una persona de confianza.')">
+            Escuchar lección
+        </button>
+    </section>
+
+    <section class="actividad">
+        <h2>Actividad de aprendizaje</h2>
+        <p>
+            Recibes un mensaje de una persona desconocida
+            que contiene un enlace extraño. ¿Qué debes hacer?
+        </p>
+
+        <label>
+            <input type="radio" name="respuesta" value="incorrecta">
+            Abrir el enlace inmediatamente.
+        </label>
+
+        <label>
+            <input type="radio" name="respuesta" value="correcta">
+            No abrirlo y pedir orientación.
+        </label>
+
+        <label>
+            <input type="radio" name="respuesta" value="incorrecta">
+            Compartir tus datos personales.
+        </label>
+
+        <button class="btn-primary" onclick="comprobarRespuesta()">
+            Comprobar respuesta
+        </button>
+
+        <p id="resultado-actividad" aria-live="polite"></p>
+    </section>
+
+    <section class="curso-final">
+        <h2>¡Felicitaciones!</h2>
+        <p>Has terminado el curso Me cuido en Internet.</p>
+        <a href="cursos.html" class="btn-primary">Volver a los cursos</a>
+    </section>
+
+</main>
+
+<footer>
+    <p>PICT - Plataforma Inclusiva de Capacitación Tecnológica</p>
+</footer>
+
+<script>
+function escucharTexto(texto) {
+    if (!("speechSynthesis" in window)) {
+        alert("Tu navegador no admite la lectura de voz.");
+        return;
+    }
+
+    speechSynthesis.cancel();
+
+    const mensaje = new SpeechSynthesisUtterance(texto);
+    mensaje.lang = "es-CO";
+    mensaje.rate = 0.9;
+
+    speechSynthesis.speak(mensaje);
+}
+
+function comprobarRespuesta() {
+    const respuesta = document.querySelector('input[name="respuesta"]:checked');
+    const resultado = document.getElementById("resultado-actividad");
+
+    if (!respuesta) {
+        resultado.textContent = "Selecciona una respuesta antes de continuar.";
+        return;
+    }
+
+    if (respuesta.value === "correcta") {
+        resultado.textContent = "¡Muy bien! Has identificado la opción segura.";
+    } else {
+        resultado.textContent = "Inténtalo nuevamente. Recuerda proteger tus datos personales.";
+    }
+}
+</script>
+
+<!-- Botón de accesibilidad PICT -->
+<div class="pict-accesibilidad">
+
+  <button id="btn-accesibilidad"
+          type="button"
+          aria-label="Abrir opciones de accesibilidad"
+          aria-expanded="false"
+          aria-controls="menu-accesibilidad">
+    ♿
+  </button>
+
+  <div id="menu-accesibilidad" hidden>
+    <h2>Accesibilidad</h2>
+
+    <button type="button" id="aumentar-texto">
+      A+ Aumentar texto
+    </button>
+
+    <button type="button" id="disminuir-texto">
+      A- Disminuir texto
+    </button>
+
+    <button type="button" id="alto-contraste">
+      Alto contraste
+    </button>
+
+    <button type="button" id="leer-pagina">
+      🔊 Leer página
+    </button>
+
+    <button type="button" id="detener-lectura">
+      Detener lectura
+    </button>
+
+    <button type="button" id="restablecer-accesibilidad">
+      Restablecer
+    </button>
+
+  </div>
+</div>
+
+<script src="accesibilidad.js" defer></script>
+</body>
+</html>

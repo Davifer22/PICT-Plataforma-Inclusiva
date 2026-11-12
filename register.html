@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse | PICT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="auth-layout">
+
+        <!-- Columna azul -->
+        <section class="auth-info">
+
+            <div class="auth-logo">
+                <img src="logo PICT.png" alt="Logo de PICT">
+                <h1>PICT</h1>
+            </div>
+
+            <h2>¡Únete a nuestra comunidad!</h2>
+
+            <p>
+                Crea tu cuenta y accede a una experiencia de
+                capacitación tecnológica accesible e inclusiva.
+            </p>
+
+            <ul>
+                <li>Aprende a tu propio ritmo.</li>
+                <li>Desarrolla habilidades digitales.</li>
+                <li>Explora contenidos accesibles.</li>
+                <li>Aprende sin barreras.</li>
+            </ul>
+
+        </section>
+
+        <!-- Columna blanca -->
+        <section class="auth-form-panel">
+
+            <h2>Crear una cuenta</h2>
+
+            <p>Completa tus datos para registrarte en PICT.</p>
+
+            <form class="auth-form" action="procesar_registro.php" method="POST">
+                <label for="nombre">Nombre completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Escribe tu nombre completo"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="tipo-documento">Tipo de documento</label>
+                <select id="tipo-documento" name="tipo-documento" required>
+                    <option value="">Selecciona tu documento</option>
+                    <option value="CC">Cédula de ciudadanía (CC)</option>
+                    <option value="TI">Tarjeta de identidad (TI)</option>
+                    <option value="CE">Cédula de extranjería (CE)</option>
+                </select>
+
+                <label for="documento">Número de documento</label>
+                <input
+                    type="text"
+                    id="documento"
+                    name="documento"
+                    inputmode="numeric"
+                    placeholder="Escribe tu número de documento"
+                    required
+                >
+
+                <label for="fecha">Fecha de nacimiento</label>
+                <input
+                    type="date"
+                    id="fecha"
+                    name="fecha"
+                    required
+                >
+
+                <label for="correo">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="Escribe tu correo electrónico"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="contrasena">Contraseña</label>
+                <input
+                    type="password"
+                    id="contrasena"
+                    name="contrasena"
+                    placeholder="Crea una contraseña"
+                    autocomplete="new-password"
+                    required
+                >
+
+                <button type="submit" class="btn-primary">
+                    Registrarme
+                </button>
+
+            </form>
+
+            <p class="auth-links">
+                ¿Ya tienes una cuenta?
+                <a href="login.html">Inicia sesión</a>
+            </p>
+
+            <a href="index.html" class="back-link">
+                Volver al inicio
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- Botón de accesibilidad PICT -->
+<div class="pict-accesibilidad">
+
+  <button id="btn-accesibilidad"
+          type="button"
+          aria-label="Abrir opciones de accesibilidad"
+          aria-expanded="false"
+          aria-controls="menu-accesibilidad">
+    ♿
+  </button>
+
+  <div id="menu-accesibilidad" hidden>
+    <h2>Accesibilidad</h2>
+
+    <button type="button" id="aumentar-texto">
+      A+ Aumentar texto
+    </button>
+
+    <button type="button" id="disminuir-texto">
+      A- Disminuir texto
+    </button>
+
+    <button type="button" id="alto-contraste">
+      Alto contraste
+    </button>
+
+    <button type="button" id="leer-pagina">
+      🔊 Leer página
+    </button>
+
+    <button type="button" id="detener-lectura">
+      Detener lectura
+    </button>
+
+    <button type="button" id="restablecer-accesibilidad">
+      Restablecer
+    </button>
+
+  </div>
+</div>
+
+<script src="accesibilidad.js" defer></script>
+
+</body>
+</html>

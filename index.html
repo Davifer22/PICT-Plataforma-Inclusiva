@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - PICT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo PICT.png" alt="Logo de PICT">
+            <h1>PICT</h1>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <a href="cursos.html" class="btn">Explorar cursos</a>
+            <a href="login.html" class="btn">Iniciar sesión</a>
+            <a href="register.html" class="btn">Registrarse</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="inicio-columnas">
+
+            <div class="panel-azul">
+                <h2>PICT: Tecnología clara. A tu ritmo.</h2>
+
+                <p>
+                    Aprende habilidades digitales mediante una
+                    experiencia de formación accesible e inclusiva.
+                </p>
+
+                <ul>
+                    <li>Instrucciones sencillas y claras.</li>
+                    <li>Aprendizaje a tu propio ritmo.</li>
+                    <li>Contenidos pensados para la accesibilidad.</li>
+                </ul>
+            </div>
+
+            <div class="panel-blanco">
+                <h2>¡Te damos la bienvenida!</h2>
+
+                <p>
+                    Este es tu espacio para aprender, explorar
+                    y desarrollar nuevas habilidades tecnológicas.
+                </p>
+
+                <h3>Aprende sin barreras</h3>
+
+                <p>
+                    Explora nuestros cursos y comienza tu
+                    experiencia de aprendizaje sin necesidad
+                    de registrarte.
+                </p>
+
+                <a href="cursos.html" class="btn-primary">
+                    Explorar cursos
+                </a>
+            </div>
+
+        </section>
+
+        <section class="info">
+            <h2>Nuestro propósito</h2>
+
+            <p>
+                PICT nace para brindar formación tecnológica accesible,
+                promoviendo la inclusión y el aprendizaje sin barreras
+                para personas con discapacidad visual y cognitiva.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Inclusión</h3>
+                    <p>Diseño pensado para todas las personas.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Accesibilidad</h3>
+                    <p>Colores, textos y navegación claros.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Capacitación</h3>
+                    <p>Formación en habilidades digitales.</p>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    
+<!-- Botón de accesibilidad PICT -->
+<div class="pict-accesibilidad">
+
+  <button id="btn-accesibilidad"
+          type="button"
+          aria-label="Abrir opciones de accesibilidad"
+          aria-expanded="false"
+          aria-controls="menu-accesibilidad">
+    ♿
+  </button>
+
+  <div id="menu-accesibilidad" hidden>
+    <h2>Accesibilidad</h2>
+
+    <button type="button" id="aumentar-texto">
+      A+ Aumentar texto
+    </button>
+
+    <button type="button" id="disminuir-texto">
+      A- Disminuir texto
+    </button>
+
+    <button type="button" id="alto-contraste">
+      Alto contraste
+    </button>
+
+    <button type="button" id="leer-pagina">
+      🔊 Leer página
+    </button>
+
+    <button type="button" id="detener-lectura">
+      Detener lectura
+    </button>
+
+    <button type="button" id="restablecer-accesibilidad">
+      Restablecer
+    </button>
+
+  </div>
+</div>
+
+<script src="accesibilidad.js" defer></script>
+
+
+</body>
+</html>

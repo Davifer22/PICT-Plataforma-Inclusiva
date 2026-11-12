@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendo a crear documentos - PICT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="encabezado">
+    <div class="encabezado-contenido">
+        <div class="marca">
+            <img src="logo PICT.png" alt="Logo de PICT">
+            <h1>PICT</h1>
+        </div>
+    </div>
+</header>
+
+<main class="contenido-curso">
+
+    <section class="curso-intro">
+        <h1>Aprendo a crear documentos</h1>
+        <p>
+            En este curso aprenderás a crear, escribir, modificar y guardar
+            documentos en el computador.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Bienvenido al curso Aprendo a crear documentos. Aquí aprenderás a crear y guardar documentos en el computador.')">
+            Escuchar introducción
+        </button>
+    </section>
+
+    <section class="leccion">
+        <h2>Lección 1. ¿Qué es un documento?</h2>
+        <p>
+            Un documento es un archivo que permite escribir y organizar
+            información, como textos, tareas, cartas o trabajos.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Un documento es un archivo que permite escribir y organizar información, como textos, tareas, cartas o trabajos.')">
+            Escuchar lección
+        </button>
+    </section>
+
+    <section class="leccion">
+        <h2>Lección 2. ¿Cómo crear un documento?</h2>
+        <p>
+            Para crear un documento puedes abrir un programa de escritura,
+            como Microsoft Word o LibreOffice Writer. Después selecciona
+            la opción de documento en blanco.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Para crear un documento puedes abrir un programa de escritura, como Microsoft Word o LibreOffice Writer. Después selecciona la opción de documento en blanco.')">
+            Escuchar lección
+        </button>
+    </section>
+
+    <section class="leccion">
+        <h2>Lección 3. Escribir y modificar texto</h2>
+        <p>
+            Utiliza el teclado para escribir. Si necesitas corregir una
+            palabra, puedes utilizar las teclas de borrar. También puedes
+            seleccionar una parte del texto para modificarla.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Utiliza el teclado para escribir. Si necesitas corregir una palabra, puedes utilizar las teclas de borrar. También puedes seleccionar una parte del texto para modificarla.')">
+            Escuchar lección
+        </button>
+    </section>
+
+    <section class="leccion">
+        <h2>Lección 4. Cambiar el tamaño de la letra</h2>
+        <p>
+            Puedes seleccionar el texto y cambiar el tamaño de la letra
+            para facilitar su lectura. También puedes utilizar negrita
+            para destacar palabras importantes.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Puedes seleccionar el texto y cambiar el tamaño de la letra para facilitar su lectura. También puedes utilizar negrita para destacar palabras importantes.')">
+            Escuchar lección
+        </button>
+    </section>
+
+    <section class="leccion">
+        <h2>Lección 5. ¿Cómo guardar un documento?</h2>
+        <p>
+            Para guardar tu trabajo, selecciona la opción Guardar.
+            Elige una carpeta, escribe un nombre para el archivo
+            y confirma la operación.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Para guardar tu trabajo, selecciona la opción Guardar. Elige una carpeta, escribe un nombre para el archivo y confirma la operación.')">
+            Escuchar lección
+        </button>
+    </section>
+
+    <section class="leccion">
+        <h2>Lección 6. Abrir un documento guardado</h2>
+        <p>
+            Para consultar un documento que guardaste anteriormente,
+            abre el programa de escritura, selecciona Abrir y busca
+            el archivo en la carpeta donde lo guardaste.
+        </p>
+        <button class="btn-primary" onclick="escucharTexto('Para consultar un documento que guardaste anteriormente, abre el programa de escritura, selecciona Abrir y busca el archivo en la carpeta donde lo guardaste.')">
+            Escuchar lección
+        </button>
+    </section>
+
+    <section class="actividad">
+        <h2>Actividad de aprendizaje</h2>
+        <p>
+            ¿Qué opción debes utilizar para conservar un documento
+            en el computador?
+        </p>
+
+        <label>
+            <input type="radio" name="respuesta" value="incorrecta">
+            Eliminar.
+        </label>
+
+        <label>
+            <input type="radio" name="respuesta" value="correcta">
+            Guardar.
+        </label>
+
+        <label>
+            <input type="radio" name="respuesta" value="incorrecta">
+            Cerrar.
+        </label>
+
+        <button class="btn-primary" onclick="comprobarRespuesta()">
+            Comprobar respuesta
+        </button>
+
+        <p id="resultado-actividad" aria-live="polite"></p>
+    </section>
+
+    <section class="curso-final">
+        <h2>¡Felicitaciones!</h2>
+        <p>Has terminado el curso Aprendo a crear documentos.</p>
+        <a href="cursos.html" class="btn-primary">Volver a los cursos</a>
+    </section>
+
+</main>
+
+<footer>
+    <p>PICT - Plataforma Inclusiva de Capacitación Tecnológica</p>
+</footer>
+
+<script>
+function escucharTexto(texto) {
+    if (!("speechSynthesis" in window)) {
+        alert("Tu navegador no admite la lectura de voz.");
+        return;
+    }
+
+    speechSynthesis.cancel();
+
+    const mensaje = new SpeechSynthesisUtterance(texto);
+    mensaje.lang = "es-CO";
+    mensaje.rate = 0.9;
+
+    speechSynthesis.speak(mensaje);
+}
+
+function comprobarRespuesta() {
+    const respuesta = document.querySelector('input[name="respuesta"]:checked');
+    const resultado = document.getElementById("resultado-actividad");
+
+    if (!respuesta) {
+        resultado.textContent = "Selecciona una respuesta antes de continuar.";
+        return;
+    }
+
+    if (respuesta.value === "correcta") {
+        resultado.textContent = "¡Muy bien! La respuesta es correcta.";
+    } else {
+        resultado.textContent = "Inténtalo nuevamente. Recuerda que debes guardar el documento.";
+    }
+}
+</script>
+
+<!-- Botón de accesibilidad PICT -->
+<div class="pict-accesibilidad">
+
+  <button id="btn-accesibilidad"
+          type="button"
+          aria-label="Abrir opciones de accesibilidad"
+          aria-expanded="false"
+          aria-controls="menu-accesibilidad">
+    ♿
+  </button>
+
+  <div id="menu-accesibilidad" hidden>
+    <h2>Accesibilidad</h2>
+
+    <button type="button" id="aumentar-texto">
+      A+ Aumentar texto
+    </button>
+
+    <button type="button" id="disminuir-texto">
+      A- Disminuir texto
+    </button>
+
+    <button type="button" id="alto-contraste">
+      Alto contraste
+    </button>
+
+    <button type="button" id="leer-pagina">
+      🔊 Leer página
+    </button>
+
+    <button type="button" id="detener-lectura">
+      Detener lectura
+    </button>
+
+    <button type="button" id="restablecer-accesibilidad">
+      Restablecer
+    </button>
+
+  </div>
+</div>
+
+<script src="accesibilidad.js" defer></script>
+</body>
+</html>
