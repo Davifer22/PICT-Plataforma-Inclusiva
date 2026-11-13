@@ -1,0 +1,27 @@
+
+<?php
+// Ejemplo de conexión a la base de datos PICT
+// Reemplazar los datos con las credenciales propias.
+
+$servidor = "localhost";
+$puerto = "3306";
+$baseDatos = "pict";
+$usuario = "TU_USUARIO_MYSQL";
+$contrasena = "TU_CONTRASENA_MYSQL";
+
+try {
+    $conexion = new PDO(
+        "mysql:host=$servidor;port=$puerto;dbname=$baseDatos;charset=utf8mb4",
+        $usuario,
+        $contrasena
+    );
+
+    $conexion->setAttribute(
+        PDO::ATTR_ERRMODE,
+        PDO::ERRMODE_EXCEPTION
+    );
+
+} catch (PDOException $error) {
+    echo "No se pudo conectar con la base de datos.";
+}
+?>
