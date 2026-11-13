@@ -41,6 +41,27 @@ PDO: permite establecer la conexión entre PHP y MySQL.
 
 try/catch: permite controlar los errores de conexión.
 
+Configuracion de la conexion MySQL
+
+Para que PICT funcione bien en otro equipo, tenes que configurar el archivo conexion php que logra la vinculacion entre PHP y la base de datos MySQL.
+
+Pasos para ajustar la conexion:
+
+1. Baja el proyecto PICT desde el repositorio en GitHub.
+2. Abre la carpeta del proyecto usando Visual Studio Code.
+3. Busca el archivo conexion ejemplo txt, el cual tiene el codigo base con datos de muestra.
+4. Crea un nuevo archivo nombrado conexion php adentro de la carpeta principal de PICT.
+5. Copia todo el contenido del txt de ejemplo y pegalo directo en conexion php.
+6. Cambia TU USUARIO MYSQL y TU CONTRASENA MYSQL por los datos de acceso reales del servidor MySQL que esta instalado en la maquina.
+7. Verifica que la base de datos se llame pict y ademas que el puerto configurado sea el que usa tu MySQL.
+8. Guarda los cambios hechos en el archivo conexion php.
+9. Inicia Apache desde XAMPP y chequea que el servidor MySQL este funcionando correctamente.
+10. Accede a http localhost PICT para probar si la plataforma levanta.
+
+Nota importante: si el computador ya posee un servidor MySQL andando como MySQL80, no es necesario iniciar MySQL desde XAMPP. Debes usar ese servidor existente para no tener conflictos con los puertos.
+
+Por seguridad el archivo conexion El archivo con credenciales reales se debe guardar localmente, nunca publicarlo en GitHub.
+
 Nota: las credenciales reales no se publican por seguridad.
 
 Instalación y ejecución de PICT
