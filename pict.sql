@@ -31,11 +31,23 @@ CREATE TABLE inscripciones (
     id_curso INT NOT NULL,
     fecha_inscripcion TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id_inscripcion),
+
+    -- Evita inscripciones duplicadas
     UNIQUE KEY uq_usuario_curso (id_usuario, id_curso),
+
+    -- Relación con usuarios
     CONSTRAINT fk_inscripcion_usuario
         FOREIGN KEY (id_usuario)
         REFERENCES usuarios(id_usuario)
-        ON DELETE CASCADE
+        ON DELETE CASCADE,
+
+    -- Relación con cursos
+    CONSTRAINT fk_inscripcion_curso
+        FOREIGN KEY (id_curso)
+        REFERENCES cursos(id_curso)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE
+
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Cinco cursos iniciales de PICT
@@ -61,3 +73,4 @@ VALUES
 (5, 'Me cuido en Internet',
  'Aprende a proteger tus datos personales en Internet.',
  'curso-seguridad.html');
+
