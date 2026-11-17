@@ -1013,3 +1013,234 @@ body.pict-alto-contraste #menu-accesibilidad {
   background: #000 !important;
   color: #fff !important;
 }
+
+
+/* ==================================
+   MEJORA DE AMPLIACIÓN DE TEXTO PICT
+================================== */
+
+/* Encabezado y botones */
+.header h1 {
+    font-size: 1.75rem;
+}
+
+.btn {
+    font-size: 1rem;
+}
+
+.btn-primary {
+    font-size: 1.0625rem;
+}
+
+/* Página principal */
+.hero h2 {
+    font-size: 2.625rem;
+}
+
+.hero p {
+    font-size: 1.125rem;
+}
+
+.info h3 {
+    font-size: 1.875rem;
+}
+
+.info p {
+    font-size: 1.0625rem;
+}
+
+/* Paneles informativos */
+.panel-azul h2 {
+    font-size: 2.125rem;
+}
+
+.panel-azul p,
+.panel-azul li,
+.panel-blanco p {
+    font-size: 1.0625rem;
+}
+
+.panel-blanco h2 {
+    font-size: 2rem;
+}
+
+.panel-blanco h3 {
+    font-size: 1.4375rem;
+}
+
+/* Formularios */
+.auth-form input,
+.auth-form select {
+    font-size: 1rem;
+}
+
+.auth-info h2 {
+    font-size: 2.125rem;
+}
+
+.auth-info p,
+.auth-info li {
+    font-size: 1.0625rem;
+}
+
+/* Catálogo de cursos */
+.catalogo-intro h1 {
+    font-size: 2.125rem;
+}
+
+.catalogo-intro p {
+    font-size: 1.0625rem;
+}
+
+.curso-card h2 {
+    font-size: 1.3125rem;
+}
+
+.curso-card p {
+    font-size: 0.9375rem;
+}
+
+/* Contenidos educativos */
+.curso-encabezado h2 {
+    font-size: 2rem;
+}
+
+.curso-encabezado p,
+.leccion p,
+.leccion li,
+.actividad p,
+.final-curso p {
+    font-size: 1.125rem;
+}
+
+.leccion h2,
+.actividad h2,
+.final-curso h2 {
+    font-size: 1.5625rem;
+}
+
+.parte-computador h3 {
+    font-size: 1.25rem;
+}
+
+.btn-escuchar {
+    font-size: 1rem;
+}
+
+.actividad legend,
+.opcion-respuesta {
+    font-size: 1.125rem;
+}
+
+/* Menú de accesibilidad */
+#menu-accesibilidad h2 {
+    font-size: 1.25rem;
+}
+
+#menu-accesibilidad button {
+    font-size: 0.9375rem;
+}
+
+/* Evitar que los textos largos desborden */
+.card,
+.curso-card,
+.leccion,
+.actividad,
+.auth-container {
+    overflow-wrap: break-word;
+}
+
+
+/* ===== CORRECCIÓN DE ALTO CONTRASTE PICT ===== */
+
+/* Textos de las páginas y lecciones */
+body.pict-alto-contraste h1,
+body.pict-alto-contraste h2,
+body.pict-alto-contraste h3,
+body.pict-alto-contraste h4,
+body.pict-alto-contraste h5,
+body.pict-alto-contraste h6,
+body.pict-alto-contraste p,
+body.pict-alto-contraste li,
+body.pict-alto-contraste label,
+body.pict-alto-contraste legend,
+body.pict-alto-contraste span {
+    color: #ffffff !important;
+}
+
+/* Fondos de tarjetas, paneles y lecciones */
+body.pict-alto-contraste .leccion,
+body.pict-alto-contraste .actividad,
+body.pict-alto-contraste .final-curso,
+body.pict-alto-contraste .curso-encabezado,
+body.pict-alto-contraste .contenido-curso,
+body.pict-alto-contraste .panel-azul,
+body.pict-alto-contraste .panel-blanco,
+body.pict-alto-contraste .card,
+body.pict-alto-contraste .auth-container {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+/* Mantener los enlaces amarillos */
+body.pict-alto-contraste a {
+    color: #ffff00 !important;
+}
+
+/* Mantener los botones amarillos con texto negro */
+body.pict-alto-contraste button,
+body.pict-alto-contraste .btn-primary {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+
+/* Mantener el texto de los botones legible */
+body.pict-alto-contraste button *,
+body.pict-alto-contraste .btn-primary * {
+    color: #000000 !important;
+}
+
+
+/* ===== AJUSTE FINAL DE ALTO CONTRASTE PICT ===== */
+
+/* Fondos de las secciones educativas */
+body.pict-alto-contraste .curso-intro,
+body.pict-alto-contraste .curso-final,
+body.pict-alto-contraste .leccion,
+body.pict-alto-contraste .actividad,
+body.pict-alto-contraste .contenido-curso,
+body.pict-alto-contraste .curso-card {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+/* Títulos y textos de las lecciones */
+body.pict-alto-contraste .contenido-curso h1,
+body.pict-alto-contraste .contenido-curso h2,
+body.pict-alto-contraste .contenido-curso h3,
+body.pict-alto-contraste .contenido-curso p,
+body.pict-alto-contraste .contenido-curso li,
+body.pict-alto-contraste .contenido-curso strong,
+body.pict-alto-contraste .contenido-curso label,
+body.pict-alto-contraste .contenido-curso legend {
+    color: #ffffff !important;
+}
+
+/* Campos de escritura */
+body.pict-alto-contraste input,
+body.pict-alto-contraste textarea,
+body.pict-alto-contraste select {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+}
+
+/* Mantener botones con texto oscuro sobre amarillo */
+body.pict-alto-contraste .btn-primary,
+body.pict-alto-contraste button {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+}
