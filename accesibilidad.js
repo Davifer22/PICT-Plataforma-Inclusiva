@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Aumentar o disminuir texto
   function cambiarTexto(cantidad) {
-    escala = Math.max(80, Math.min(150, escala + cantidad));
+   escala = Math.max(80, Math.min(200, escala + cantidad));
     document.documentElement.style.fontSize = escala + "%";
   }
 
