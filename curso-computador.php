@@ -86,6 +86,10 @@ if ((int) $consulta->fetchColumn() === 0) {
 
     <!-- LECCIÓN 1 -->
     <section class="leccion">
+
+    <p class="indicador-avance">
+    Lección 1 de 6 — Avance del recorrido: 17 %
+</p>
         <h2>Lección 1. ¿Qué es un computador?</h2>
 
         <h3>Objetivo de aprendizaje</h3>
@@ -169,6 +173,10 @@ if ((int) $consulta->fetchColumn() === 0) {
 
     <!-- LECCIÓN 2 -->
     <section class="leccion">
+
+    <p class="indicador-avance">
+    Lección 2 de 6 — Avance del recorrido: 33 %
+</p>
         <h2>Lección 2. Partes principales del computador</h2>
 
         <h3>Objetivo de aprendizaje</h3>
@@ -178,6 +186,12 @@ if ((int) $consulta->fetchColumn() === 0) {
         </p>
 
         <h3>1. Monitor</h3>
+
+<img src="imagenes/monitor.png"
+     alt="Monitor de computador de escritorio visto de frente"
+     class="imagen-leccion"
+     style="width: 250px; max-width: 100%; height: auto;">
+
 
         <p>
             El monitor es la pantalla donde podemos
@@ -193,6 +207,12 @@ if ((int) $consulta->fetchColumn() === 0) {
 
         <h3>2. Teclado</h3>
 
+<img src="imagenes/teclado.png"
+     alt="Teclado de computador con letras, números y otras teclas"
+     class="imagen-leccion"
+     style="width: 250px; max-width: 100%; height: auto;">
+
+
         <p>
             El teclado contiene letras, números,
             símbolos y teclas especiales que
@@ -202,6 +222,13 @@ if ((int) $consulta->fetchColumn() === 0) {
 
         <h3>3. Mouse o ratón</h3>
 
+
+<img src="imagenes/mouse.png"
+     alt="Ratón de computador con botones y rueda de desplazamiento"
+     class="imagen-leccion"
+     style="width: 250px; max-width: 100%; height: auto;">
+
+
         <p>
             El mouse permite mover el puntero
             que aparece en la pantalla.
@@ -210,6 +237,11 @@ if ((int) $consulta->fetchColumn() === 0) {
         </p>
 
         <h3>4. Torre o unidad central</h3>
+
+        <img src="imagenes/torre.png"
+     alt="Torre de computador de escritorio que contiene los componentes internos"
+     class="imagen-leccion"
+     style="width: 250px; max-width: 100%; height: auto;">
 
         <p>
             En muchos computadores de escritorio
@@ -225,32 +257,90 @@ if ((int) $consulta->fetchColumn() === 0) {
 
         <h3>5. Otros dispositivos</h3>
 
-        <ul>
-            <li>
-                <strong>Parlantes:</strong>
-                permiten escuchar sonidos.
-            </li>
-            <li>
-                <strong>Micrófono:</strong>
-                permite grabar nuestra voz.
-            </li>
-            <li>
-                <strong>Cámara:</strong>
-                permite participar en videollamadas.
-            </li>
-            <li>
-                <strong>Impresora:</strong>
-                permite imprimir documentos.
-            </li>
-        </ul>
+        <ul class="lista-dispositivos">
+    <li>
+        <strong>Parlantes:</strong>
+        permiten escuchar sonidos.
+
+        <img src="imagenes/parlante.png"
+             alt="Dos parlantes pequeños para computador"
+             class="imagen-leccion"
+             style="width: 180px; max-width: 100%; height: auto;">
+    </li>
+
+    <li>
+        <strong>Micrófono:</strong>
+        permite grabar nuestra voz.
+
+        <img src="imagenes/microfono.png"
+             alt="Micrófono de escritorio con base"
+             class="imagen-leccion"
+             style="width: 180px; max-width: 100%; height: auto;">
+    </li>
+
+    <li>
+        <strong>Cámara:</strong>
+        permite participar en videollamadas.
+
+        <img src="imagenes/camara.png"
+             alt="Cámara web para computador"
+             class="imagen-leccion"
+             style="width: 180px; max-width: 100%; height: auto;">
+    </li>
+
+    <li>
+        <strong>Impresora:</strong>
+        permite imprimir documentos.
+
+        <img src="imagenes/impresora.png"
+             alt="Impresora de escritorio"
+             class="imagen-leccion"
+             style="width: 180px; max-width: 100%; height: auto;">
+    </li>
+</ul>
 
         <h3>6. Actividad práctica</h3>
 
         <p>
-            Observa un computador e identifica
-            el monitor, el teclado y el mouse.
-            Después explica para qué sirve cada uno.
-        </p>
+    Observa las imágenes anteriores e identifica
+    las partes del computador.
+</p>
+
+<div class="actividad-identificacion">
+    <fieldset>
+        <legend>
+            ¿Qué dispositivo utilizamos para mover
+            el puntero y seleccionar elementos?
+        </legend>
+
+        <label>
+            <input type="radio" name="identificar-dispositivo"
+                   value="monitor">
+            Monitor
+        </label>
+
+        <label>
+            <input type="radio" name="identificar-dispositivo"
+                   value="mouse">
+            Mouse o ratón
+        </label>
+
+        <label>
+            <input type="radio" name="identificar-dispositivo"
+                   value="teclado">
+            Teclado
+        </label>
+    </fieldset>
+
+    <button type="button" class="btn-primary"
+            onclick="comprobarIdentificacion()">
+        Comprobar respuesta
+    </button>
+
+    <p id="resultado-identificacion"
+       role="status"
+       aria-live="polite"></p>
+</div>
 
         <button class="btn-primary" type="button"
             onclick="escucharLeccion(this)">
@@ -260,6 +350,12 @@ if ((int) $consulta->fetchColumn() === 0) {
 
     <!-- LECCIÓN 3 -->
     <section class="leccion">
+
+    
+<p class="indicador-avance">
+    Lección 3 de 6 — Avance del recorrido: 50 %
+</p>
+
         <h2>
             Lección 3. ¿Cómo comenzar a utilizar
             el computador?
@@ -345,6 +441,12 @@ if ((int) $consulta->fetchColumn() === 0) {
 
     <!-- LECCIÓN 4 -->
     <section class="leccion">
+
+
+<p class="indicador-avance">
+    Lección 4 de 6 — Avance del recorrido: 67 %
+</p>
+
         <h2>
             Lección 4. ¿Cómo encender y apagar
             el computador?
@@ -426,6 +528,11 @@ if ((int) $consulta->fetchColumn() === 0) {
 
     <!-- LECCIÓN 5 -->
     <section class="leccion">
+
+<p class="indicador-avance">
+    Lección 5 de 6 — Avance del recorrido: 83 %
+</p>
+
         <h2>Lección 5. ¿Cómo utilizar el mouse?</h2>
 
         <h3>Objetivo de aprendizaje</h3>
@@ -511,6 +618,12 @@ if ((int) $consulta->fetchColumn() === 0) {
 
     <!-- LECCIÓN 6 -->
     <section class="leccion">
+
+
+<p class="indicador-avance">
+    Lección 6 de 6 — Avance del recorrido: 100 %
+</p>
+
         <h2>Lección 6. ¿Cómo escribir con el teclado?</h2>
 
         <h3>Objetivo de aprendizaje</h3>
@@ -853,6 +966,32 @@ document.getElementById("evaluacion-curso")
                 ? "¡Excelente trabajo!"
                 : "Puedes repasar las lecciones e intentarlo nuevamente.");
     });
+
+
+function comprobarIdentificacion() {
+    const seleccion = document.querySelector(
+        'input[name="identificar-dispositivo"]:checked'
+    );
+
+    const resultado = document.getElementById(
+        "resultado-identificacion"
+    );
+
+    if (!seleccion) {
+        resultado.textContent =
+            "Selecciona una respuesta antes de continuar.";
+        return;
+    }
+
+    if (seleccion.value === "mouse") {
+        resultado.textContent =
+            "¡Muy bien! El mouse permite mover el puntero y seleccionar elementos.";
+    } else {
+        resultado.textContent =
+            "Inténtalo nuevamente. Recuerda qué dispositivo utilizamos para mover el puntero.";
+    }
+}
+
 </script>
 
 <!-- Botón de accesibilidad PICT -->
