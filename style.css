@@ -1244,3 +1244,24 @@ body.pict-alto-contraste button {
     background-color: #ffff00 !important;
     color: #000000 !important;
 }
+
+
+/* Imágenes educativas de las lecciones */
+.imagen-leccion {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 16px auto;
+    object-fit: contain;
+}
+
+/* Tamaño de las imágenes educativas de PICT */
+.imagen-leccion {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 15px auto;
+    object-fit: contain;
+}
